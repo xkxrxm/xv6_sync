@@ -22,9 +22,10 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
-int reader(void);
-int writer(void);
-int peterson(void);
+int var_clear(void);
+int var_read(void);
+int var_add(void);
+int philosopher(int);
 
 // ulib.c
 int stat(const char*, struct stat*);

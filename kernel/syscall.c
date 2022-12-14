@@ -101,9 +101,12 @@ extern uint64 sys_unlink(void);
 extern uint64 sys_link(void);
 extern uint64 sys_mkdir(void);
 extern uint64 sys_close(void);
-extern uint64 sys_reader(void);
-extern uint64 sys_writer(void);
-extern uint64 sys_peterson(void);
+extern uint64 sys_var_read(void);
+extern uint64 sys_var_add(void);
+extern uint64 sys_philosopher(void);
+extern uint64 sys_var_clear(void);
+
+
 
 // An array mapping syscall numbers from syscall.h
 // to the function that handles the system call.
@@ -129,9 +132,10 @@ static uint64 (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
-[SYS_reader]  sys_reader,
-[SYS_writer]  sys_writer,
-[SYS_peterson]  sys_peterson
+[SYS_var_clear]   sys_var_clear,
+[SYS_var_read]  sys_var_read,
+[SYS_var_add]  sys_var_add,
+[SYS_philosopher] sys_philosopher,
 };
 
 void

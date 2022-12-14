@@ -19,7 +19,9 @@
 #define SYS_unlink 18
 #define SYS_link   19
 #define SYS_mkdir  20
-#define SYS_close  21
-#define SYS_reader 22
-#define SYS_writer 23
-#define SYS_peterson 24
+#define SYS_close   21
+#define SYS_var_clear  22
+#define SYS_var_read 24
+#define SYS_var_add 25
+#define SYS_philosopher 26
+
